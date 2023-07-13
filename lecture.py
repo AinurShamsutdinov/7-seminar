@@ -77,22 +77,79 @@
 #     res = f.write(text)
 #     print(f'{res = }\n{len(text) = }')
 ############################################################################
-text = ['Lorem ipsum dolor sit amet, consectetur adipisicingelit.',
-        'Consequatur debitis explicabo laboriosam sint suscipit temporibus veniam?',
-        'Accusantium alias amet fugit iste neque non odit quiasaepe totam velit?', ]
-with open('new_data.txt', 'a', encoding='utf-8') as f:
-    for line in text:
-        res = f.write(line)
-        print(f'{res = }\n{len(line) = }')
+# text = ['Lorem ipsum dolor sit amet, consectetur adipisicingelit.',
+#         'Consequatur debitis explicabo laboriosam sint suscipit temporibus veniam?',
+#         'Accusantium alias amet fugit iste neque non odit quiasaepe totam velit?', ]
+# with open('new_data.txt', 'a', encoding='utf-8') as f:
+#     for line in text:
+#         res = f.write(line)
+#         print(f'{res = }\n{len(line) = }')
 ############################################################################
+# text = ['Lorem ipsum dolor sit amet, consectetur adipisicingelit.',
+#         'Consequatur debitis explicabo laboriosam sint suscipit temporibus veniam?',
+#         'Accusantium alias amet fugit iste neque non odit quia saepe totam velit?', ]
+# with open('new_data.txt', 'a', encoding='utf-8') as f:
+#     for line in text:
+#         res = f.write(f'{line}\n')
+#         print(f'{res = }\n{len(line) = }')
 ############################################################################
+# text = ['Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+#         'Consequatur debitis explicabo laboriosam sint suscipit temporibus veniam?',
+#         'Accusantium alias amet fugit iste neque non odit quia saepe totam velit?', ]
+# with open('new_data.txt', 'a', encoding='utf-8') as f:
+#     f.writelines('\n'.join(text))
 ############################################################################
+# text = ['Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+#         'Consequatur debitis explicabo laboriosam sint suscipit temporibus veniam?',
+#         'Accusantium alias amet fugit iste neque non odit quia saepe totam velit?', ]
+# with open('new_data.txt', 'a', encoding='utf-8') as f:
+#     for line in text:
+#         print(line, file=f)
 ############################################################################
+# text = ['Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+#         'Consequatur debitis explicabo laboriosam sint suscipit temporibus veniam?',
+#         'Accusantium alias amet fugit iste neque non odit quia saepe totam velit?', ]
+# with open('new_data.txt', 'a', encoding='utf-8') as f:
+#     for line in text:
+#         print(line, end='\n***\nKyle\n', file=f)
 ############################################################################
+# text = ['Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+#         'Consequatur debitis explicabo laboriosam sint suscipit temporibus veniam?',
+#         'Accusantium alias amet fugit iste neque non odit quia saepe totam velit?', ]
+# with open('new_data.txt', 'w', encoding='utf-8') as f:
+#     print(f.tell())
+#     for line in text:
+#         f.write(f'{line}\n')
+#         print(f.tell())
+#     print(f.tell())
+# print(f.tell())     # ValueError: I/O operation on closed file.
 ############################################################################
+# last = before = 0
+# text = ['Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+#         'Consequatur debitis explicabo laboriosam sint suscipit temporibus veniam?',
+#         'Accusantium alias amet fugit iste neque non odit quia saepe totam velit?', ]
+# with open('new_data.txt', 'r+', encoding='utf-8') as f:
+#     while line := f.readline():
+#         last, before = f.tell(), last
+#     print(f'{last = }, {before = }')
+#     print(f'{f.seek(before, 0) = }')
+#     f.write('\n'.join(text))
 ############################################################################
+# last = before = 0
+# with open('new_data.txt', 'r+', encoding='utf-8') as f:
+#     while line := f.readline():
+#         last, before = f.tell(), last
+#     print(f.seek(before, 0))
+#     print(f.truncate())
 ############################################################################
+# size = 50
+# with open('new_data.txt', 'r+', encoding='utf-8') as f:
+#     print(f.truncate(size))
 ############################################################################
+import os
+from pathlib import Path
+print(os.getcwd())
+print(Path.cwd())
 ############################################################################
 ############################################################################
 ############################################################################
