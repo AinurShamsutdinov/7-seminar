@@ -146,15 +146,40 @@
 # with open('new_data.txt', 'r+', encoding='utf-8') as f:
 #     print(f.truncate(size))
 ############################################################################
-import os
-from pathlib import Path
-print(os.getcwd())
-print(Path.cwd())
+# import os
+# from pathlib import Path
+# print(os.getcwd())
+# print(Path.cwd())
 ############################################################################
+# import os
+# from pathlib import Path
+# print(os.getcwd())
+# print(Path.cwd())
+# os.chdir('../..')
+# print(os.getcwd())
+# print(Path.cwd())
 ############################################################################
+# import os
+# from pathlib import Path
+# os.mkdir('new_os_dir')
+# Path('new_path_dir').mkdir()
 ############################################################################
+# import os
+# from pathlib import Path
+# os.makedirs('dir/other_dir/new_os_dir/test_dir')
+# Path('some_dir/dir/new_path_dir').mkdir()  # FileNotFoundError
+# Path('some_dir/dir/new_path_dir').mkdir(parents=True)   # create all parents if they don't exist
 ############################################################################
+# import os
+# from pathlib import Path
+# # os.rmdir('dir') # OSError
+# # Path('some_dir').rmdir() # OSError
+# os.rmdir('dir/other_dir/new_os_dir/test_dir')
+# Path('some_dir/dir/new_path_dir').rmdir()
 ############################################################################
+import shutil
+shutil.rmtree('dir/other_dir')
+shutil.rmtree('some_dir')
 ############################################################################
 ############################################################################
 ############################################################################
