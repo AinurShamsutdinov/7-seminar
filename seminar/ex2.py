@@ -44,6 +44,6 @@ def write_to_file(names):
 
 
 list_name = list()
-for i in range(20):
+for i in range(100):
     list_name.append(generate_name())
 write_to_file(list_name)

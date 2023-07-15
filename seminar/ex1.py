@@ -16,8 +16,8 @@ def write_to_file(num_lines: int, file_name):
     for i in range(num_lines):
         random_int = random.randint(BEGIN, END)
         random_float = random.uniform(BEGIN, END)
-        f.write(f'\n{random_int}|{random_float}')
+        f.write(f'{random_int}|{random_float}\n')
     f.close()
 
 
-write_to_file(10, 'numbers.txt')
+write_to_file(100, 'numbers.txt')
