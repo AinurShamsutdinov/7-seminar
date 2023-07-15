@@ -20,4 +20,4 @@ def write_to_file(num_lines: int, file_name):
     f.close()
 
 
-write_to_file(10, 'test.txt')
+write_to_file(10, 'numbers.txt')
