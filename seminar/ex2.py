@@ -15,8 +15,7 @@ MAX_LENGTH: int = 7
 VOWELS = {'a', 'e', 'u', 'i', 'o'}
 
 
-def write_to_file():
-    f = open('names.txt', 'a', encoding='utf-8')
+def generate_name():
     name: str = ''
     name_len = random.randint(MIN_LENGTH, MAX_LENGTH)
     for i in range(name_len):
@@ -34,9 +33,17 @@ def write_to_file():
             list_name[rand_ind] = vowel
         name = ''.join(list_name)
     name = name.capitalize()
-    f.write(f'{name}\n')
+    return name
+
+
+def write_to_file(names):
+    f = open('names.txt', 'a', encoding='utf-8')
+    for name in names:
+        f.write(f'{name}\n')
     f.close()
 
 
+list_name = list()
 for i in range(20):
-    write_to_file()
+    list_name.append(generate_name())
+write_to_file(list_name)
