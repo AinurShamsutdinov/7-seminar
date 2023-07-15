@@ -16,7 +16,7 @@ VOWELS = {'a', 'e', 'u', 'i', 'o'}
 
 
 def write_to_file():
-    f = open('names', 'a', encoding='utf-8')
+    f = open('names.txt', 'a', encoding='utf-8')
     name: str = ''
     name_len = random.randint(MIN_LENGTH, MAX_LENGTH)
     for i in range(name_len):
