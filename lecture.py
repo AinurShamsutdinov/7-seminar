@@ -177,12 +177,38 @@
 # os.rmdir('dir/other_dir/new_os_dir/test_dir')
 # Path('some_dir/dir/new_path_dir').rmdir()
 ############################################################################
-import shutil
-shutil.rmtree('dir/other_dir')
-shutil.rmtree('some_dir')
+# import shutil
+# shutil.rmtree('dir/other_dir')
+# shutil.rmtree('some_dir')
 ############################################################################
+# import os
+# from pathlib import Path
+# dir_list = os.listdir()
+# for obj in dir_list:
+#     print(f'{os.path.isdir(obj) = }', end='\t')
+#     print(f'{os.path.isfile(obj) = }', end='\t')
+#     print(f'{os.path.islink(obj) = }', end='\t')
+#     print(f'{obj = }')
+#     p = Path(Path().cwd())
+# for obj in p.iterdir():
+#     print(f'{obj.is_dir() = }', end='\t')
+#     print(f'{obj.is_file() = }', end='\t')
+#     print(f'{obj.is_symlink() = }', end='\t')
+#     print(f'{obj = }')
 ############################################################################
+# import os
+# for dir_path, dir_name, file_name in os.walk(os.getcwd()):
+#     print(f'{dir_path = }\n{dir_name = }\n{file_name = }\n')
 ############################################################################
+import os
+from pathlib import Path
+
+os.rename('old_name.py', 'new_name.py')
+
+p = Path('old_file.py')
+p.rename('new_file.py')
+
+Path('new_file.py').rename('newest_file.py')
 ############################################################################
 ############################################################################
 ############################################################################
