@@ -200,20 +200,37 @@
 # for dir_path, dir_name, file_name in os.walk(os.getcwd()):
 #     print(f'{dir_path = }\n{dir_name = }\n{file_name = }\n')
 ############################################################################
+# import os
+# from pathlib import Path
+#
+# os.rename('old_name.py', 'new_name.py')
+#
+# p = Path('old_file.py')
+# p.rename('new_file.py')
+#
+# Path('new_file.py').rename('newest_file.py')
+############################################################################
+# import os
+# from pathlib import Path
+#
+# os.replace('newest_file.py', os.path.join(os.getcwd(), 'dir', 'new_name.py'))
+# old_file = Path('new_name.py')
+# new_file = old_file.replace(Path.cwd() / 'new_os_dir' / old_file)
+############################################################################
+# import shutil
+# shutil.copy('one.txt', 'dir')
+# shutil.copy2('two.txt', 'dir')
+############################################################################
+# import shutil
+# shutil.copytree('dir', 'one_more_dir')
+############################################################################
+# import shutil
+# shutil.rmtree('dir')
+############################################################################
 import os
 from pathlib import Path
-
-os.rename('old_name.py', 'new_name.py')
-
-p = Path('old_file.py')
-p.rename('new_file.py')
-
-Path('new_file.py').rename('newest_file.py')
-############################################################################
-############################################################################
-############################################################################
-############################################################################
-############################################################################
+# os.remove('one_more_dir/one.txt')
+Path('one_more_dir/one_more.txt').unlink()
 ############################################################################
 ############################################################################
 ############################################################################
