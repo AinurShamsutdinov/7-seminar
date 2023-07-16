@@ -14,14 +14,14 @@ import random
 import string
 
 
-def write_to_file(file_extention, name_min=6, name_max=30, bite_min=256, bite_max=4096, num_files=2):
+def write_to_file(file_extention, name_min=6, name_max=30, bite_min=256, bite_max=4096, num_files=42):
     for i in range(num_files):
         file_name: str = str()
-        bites = random.randbytes(name_max - name_min)
-        for j in range(name_min, random.randint(name_min, name_max)):
-            file_name = file_name.join(random.choice(string.ascii_letters))
+        bites = random.randbytes(bite_max - bite_min)
+        name_length = random.randint(name_min, name_max)
+        for j in range(name_length):
+            file_name += file_name.join(random.choice(string.ascii_letters))
         file_name_extention = file_name + '.' + file_extention
-
         file = open(file_name_extention, 'a', encoding='utf-8')
         file.write(f'{bites}\n')
         file.close()
