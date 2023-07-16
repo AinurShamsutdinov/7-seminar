@@ -43,7 +43,8 @@ def write_to_file(names):
     f.close()
 
 
-list_name = list()
-for i in range(100):
-    list_name.append(generate_name())
-write_to_file(list_name)
+if __name__ == "__main__":
+    list_name = list()
+    for i in range(100):
+        list_name.append(generate_name())
+    write_to_file(list_name)

@@ -20,4 +20,5 @@ def write_to_file(num_lines: int, file_name):
     f.close()
 
 
-write_to_file(100, 'numbers.txt')
+if __name__ == "__main__":
+    write_to_file(100, 'numbers.txt')
