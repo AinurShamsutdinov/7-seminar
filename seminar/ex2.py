@@ -15,7 +15,7 @@ MAX_LENGTH: int = 7
 VOWELS = {'a', 'e', 'u', 'i', 'o'}
 
 
-def generate_name():
+def __generate_name__():
     name: str = ''
     name_len = random.randint(MIN_LENGTH, MAX_LENGTH)
     for i in range(name_len):
@@ -36,15 +36,19 @@ def generate_name():
     return name
 
 
-def write_to_file(names):
+def __write_to_file__(names):
     f = open('names.txt', 'a', encoding='utf-8')
     for name in names:
         f.write(f'{name}\n')
     f.close()
 
 
-if __name__ == "__main__":
+def generate_files():
     list_name = list()
     for i in range(100):
-        list_name.append(generate_name())
-    write_to_file(list_name)
+        list_name.append(__generate_name__())
+    __write_to_file__(list_name)
+
+
+if __name__ == "__main__":
+    generate_files()
