@@ -33,8 +33,8 @@ def multiply():
     else:
         max_length = len(list_names)
     for i in range(max_length):
-        mult = None
-        name = None
+        mult = 0
+        name: str = str()
         if i < len(list_nums) - 1:
             line: str = str(list_nums[i])
             num_1 = None
@@ -47,9 +47,16 @@ def multiply():
         if i < len(list_names):
             name = list_names[i]
             name = name[:len(name) - 1]
+        if mult < 0:
+            name = name.lower()
+            mult = abs(mult)
+        elif mult > 0:
+            name = name.upper()
+            mult = round(mult)
         list_name_mult.append(f'{name}\t{mult}')
     return list_name_mult
 
 
-names_numbers = multiply()
-write_to_file(names_numbers)
+if __name__ == "__main__":
+    names_numbers = multiply()
+    write_to_file(names_numbers)
