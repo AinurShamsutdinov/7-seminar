@@ -27,4 +27,5 @@ def write_to_file(file_extention, name_min=6, name_max=30, bite_min=256, bite_ma
         file.close()
 
 
-write_to_file('txt')
+if __name__ == "__main__":
+    write_to_file('txt')
