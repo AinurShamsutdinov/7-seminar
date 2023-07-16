@@ -12,7 +12,6 @@
 # ✔ Соберите из созданных на уроке и в рамках домашнего задания функций пакет для работы с файлами.
 import random
 from pathlib import Path
-import os
 
 
 def rename_files(number_of_numbers: int, file_extensions: list, range_of_original_name: list, name=''):
@@ -35,7 +34,7 @@ def __count__(count: int, number_of_numbers: int):
     number += 1
     number_str = str(number)
     buff = ''.join('0' for _ in range(len(number_str), number_of_numbers))
-    return count, buff + number_str
+    return number, buff + number_str
 
 
 if __name__ == "__main__":
